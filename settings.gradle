@@ -1,0 +1,2 @@
+rootProject.name='FakeDcard'
+include ':app'
