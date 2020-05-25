@@ -11,7 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Login"></activity>
         <activity android:name=".Signup" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="FakeDcard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
