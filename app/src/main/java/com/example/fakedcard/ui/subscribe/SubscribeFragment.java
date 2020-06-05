@@ -1,4 +1,4 @@
-package com.example.fakedcard.ui.notifications;
+package com.example.fakedcard.ui.subscribe;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.fakedcard.R;
 
-public class NotificationsFragment extends Fragment {
+public class SubscribeFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private SubscribeViewModel subscribeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        subscribeViewModel =
+                ViewModelProviders.of(this).get(SubscribeViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_subscribe, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        subscribeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
